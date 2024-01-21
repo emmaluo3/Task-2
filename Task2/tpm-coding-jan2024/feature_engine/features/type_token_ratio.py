@@ -14,7 +14,7 @@ Example: “Please, oh please can I go to the ball?” → 8 / 9 → 0.889
 """
 def get_word_TTR(text):
 	if len(text) == 0:
-		return 0
+		return "n/a"
 	text = text.lower()
 	punc = list(string.punctuation)
 	for character in text:

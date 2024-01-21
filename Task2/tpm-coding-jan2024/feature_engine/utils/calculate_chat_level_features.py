@@ -70,7 +70,7 @@ class ChatLevelFeaturesCalculator:
         politeness_features = self.chat_data["message"].apply(get_politeness_strategies)
         for col in politeness_features.columns:
             self.chat_data[col] = politeness_features[col]
-        df = pd.concat([df, politeness_features], axis=1)
+        self.chat_data = pd.concat([self.chat_data, politeness_features], axis=1)
 
 
         #pd.concat([self.chat_data, new_df[0]], axis = 1, join="outer")
